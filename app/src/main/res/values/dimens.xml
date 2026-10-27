@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ChronoX Design System — Dimensions
+    Use @dimen references in all layouts. Do not hard-code sizes.
+
+    Base spacing unit: 4dp
+    Spacing scale: 4, 8, 16, 24, 32 dp
+-->
+<resources>
+    <!-- =========================================================
+         SPACING SYSTEM
+         All padding/margin values should use one of these.
+         ========================================================= -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- =========================================================
+         SCREEN LAYOUT
+         ========================================================= -->
+    <!-- Standard horizontal padding for all screens -->
+    <dimen name="screen_padding_horizontal">16dp</dimen>
+    <!-- Standard vertical padding for all screens -->
+    <dimen name="screen_padding_vertical">16dp</dimen>
+
+    <!-- =========================================================
+         CARDS
+         ========================================================= -->
+    <dimen name="card_radius">20dp</dimen>
+    <dimen name="card_radius_sm">12dp</dimen>
+    <dimen name="card_elevation">0dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_margin_vertical">8dp</dimen>
+
+    <!-- =========================================================
+         TYPOGRAPHY
+         ========================================================= -->
+    <!-- The massive digital clock face on the Home screen -->
+    <dimen name="text_clock_large">64sp</dimen>
+    <!-- Secondary clock displays (World Clock, Chess Timer) -->
+    <dimen name="text_clock_medium">48sp</dimen>
+    <!-- Timer/stopwatch running display -->
+    <dimen name="text_clock_small">36sp</dimen>
+    <!-- Chess timer player display -->
+    <dimen name="text_chess_clock">52sp</dimen>
+
+    <!-- Screen/section titles -->
+    <dimen name="text_screen_title">32sp</dimen>
+    <!-- Card/section sub-titles -->
+    <dimen name="text_section_title">20sp</dimen>
+    <!-- Normal body text -->
+    <dimen name="text_normal">16sp</dimen>
+    <!-- Secondary descriptive text (timezone, date) -->
+    <dimen name="text_secondary">14sp</dimen>
+    <!-- Small labels, badges -->
+    <dimen name="text_small">12sp</dimen>
+
+    <!-- =========================================================
+         BUTTONS
+         ========================================================= -->
+    <!-- Primary action buttons (Start/Pause/Resume) -->
+    <dimen name="button_primary_height">56dp</dimen>
+    <dimen name="button_primary_width">160dp</dimen>
+    <dimen name="button_radius">28dp</dimen>
+
+    <!-- Circular icon buttons (Lap, Reset) -->
+    <dimen name="button_icon_size">48dp</dimen>
+    <dimen name="button_icon_radius">24dp</dimen>
+
+    <!-- Large chess timer tap area — must be easily tappable -->
+    <dimen name="chess_button_min_height">180dp</dimen>
+
+    <!-- =========================================================
+         FAB (Floating Action Button)
+         ========================================================= -->
+    <dimen name="fab_margin">24dp</dimen>
+
+    <!-- =========================================================
+         BOTTOM NAVIGATION
+         ========================================================= -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+
+    <!-- =========================================================
+         LIST ITEMS
+         ========================================================= -->
+    <dimen name="list_item_height">72dp</dimen>
+    <dimen name="list_item_padding_vertical">12dp</dimen>
+    <dimen name="list_item_padding_horizontal">16dp</dimen>
+
+    <!-- =========================================================
+         ICONS
+         ========================================================= -->
+    <dimen name="icon_size_sm">20dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">32dp</dimen>
+
+    <!-- =========================================================
+         DIVIDER
+         ========================================================= -->
+    <dimen name="divider_height">1dp</dimen>
+
+    <!-- =========================================================
+         WORLD CLOCK ITEM
+         ========================================================= -->
+    <dimen name="world_clock_time_size">28sp</dimen>
+    <dimen name="world_clock_item_height">80dp</dimen>
+</resources>

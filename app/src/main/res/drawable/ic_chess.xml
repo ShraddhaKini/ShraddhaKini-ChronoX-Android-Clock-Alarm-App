@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Recognizable chess king icon for the Chess bottom-navigation item. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M10,2h4v3h3v2h-3v3h1.5l1.7,7H6.8l1.7,-7H10V7H7V5h3V2zM6,17h12v2H6v-2zM5,20h14v2H5v-2z" />
+</vector>

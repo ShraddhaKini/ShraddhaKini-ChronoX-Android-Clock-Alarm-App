@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Bottom Navigation Menu for ChronoX.
+    5 main destinations: Clock, Alarm, World Clock, Timer, Chess.
+    Timer section internally hosts Countdown / Stopwatch tabs.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_clock"
+        android:icon="@drawable/ic_clock"
+        android:title="@string/nav_clock" />
+
+    <item
+        android:id="@+id/nav_alarm"
+        android:icon="@drawable/ic_alarm"
+        android:title="@string/nav_alarm" />
+
+    <item
+        android:id="@+id/nav_world_clock"
+        android:icon="@drawable/ic_world_clock"
+        android:title="@string/nav_world_clock" />
+
+    <item
+        android:id="@+id/nav_timer"
+        android:icon="@drawable/ic_timer"
+        android:title="@string/nav_timer" />
+
+    <item
+        android:id="@+id/nav_chess"
+        android:icon="@drawable/ic_chess"
+        android:title="@string/nav_chess" />
+
+</menu>

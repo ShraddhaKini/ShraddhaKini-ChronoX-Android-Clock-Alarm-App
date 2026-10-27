@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_main.xml — Root layout for MainActivity.
+
+    CoordinatorLayout (root) — NO fitsSystemWindows: insets handled in code
+    ├── NavHostFragment — content area; top padding added in code = status bar height
+    └── BottomNavigationView — 4 tabs; bottom padding added in code = nav bar height
+
+    WHY insets are handled in code (MainActivity.applyWindowInsets()):
+    Setting fitsSystemWindows on CoordinatorLayout consumes ALL insets including
+    bottom, which on many devices causes the BottomNavigationView to float above
+    the navigation bar area — leaving an ugly gap or misaligned labels.
+    By handling insets ourselves, we get pixel-perfect alignment on all devices.
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorAppBackground">
+
+    <!-- Fragment container — fills full screen; top padding set programmatically -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+
+    <!--
+        Bottom Navigation — pinned to bottom.
+        Height is 56dp (Material spec for bottom nav).
+        Bottom padding is added in code = system navigation bar height,
+        so that labels are always visible above the system gesture/nav bar.
+    -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_floating_bar"
+        
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="@color/bottom_nav_colors"
+        app:itemIconTint="@color/bottom_nav_colors"
+        app:itemRippleColor="?attr/colorAppAccentLight"
+        app:labelVisibilityMode="labeled"
+        app:itemPaddingTop="12dp"
+        app:itemPaddingBottom="12dp"
+        app:elevation="8dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ChronoX Style Library — Fixed version.
+    All styles use correct Material Components parent chains.
+-->
+<resources>
+
+    <!-- =========================================================
+         SHAPE APPEARANCES
+         ========================================================= -->
+    <style name="ShapeAppearance.ChronoX.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/card_radius_sm</item>
+    </style>
+
+    <style name="ShapeAppearance.ChronoX.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/card_radius</item>
+    </style>
+
+    <!-- =========================================================
+         MATERIAL CARDS
+         ========================================================= -->
+    <style name="Widget.ChronoX.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/colorAppSurface</item>
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="strokeColor">?attr/colorAppDivider</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="contentPadding">@dimen/card_padding</item>
+    </style>
+
+    <style name="Widget.ChronoX.Card.Secondary" parent="Widget.ChronoX.Card">
+        <item name="cardBackgroundColor">?attr/colorAppSurfaceSecondary</item>
+    </style>
+
+    <!-- =========================================================
+         BUTTONS
+         ========================================================= -->
+    <style name="Widget.ChronoX.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/bg_button_3d</item>
+        <item name="android:minHeight">@dimen/button_primary_height</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="rippleColor">?attr/colorAppAccentLight</item>
+        <item name="android:stateListAnimator">@animator/btn_press</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="Widget.ChronoX.Button.Secondary" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?attr/colorAppTextPrimary</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/bg_button_3d_secondary</item>
+        <item name="android:minHeight">@dimen/button_primary_height</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="rippleColor">?attr/colorAppAccentLight</item>
+        <item name="android:stateListAnimator">@animator/btn_press</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="Widget.ChronoX.Button.Icon" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">?attr/colorAppTextSecondary</item>
+        <item name="strokeColor">?attr/colorAppDivider</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cornerRadius">@dimen/button_icon_radius</item>
+        <item name="android:minWidth">@dimen/button_icon_size</item>
+        <item name="android:minHeight">@dimen/button_icon_size</item>
+        <item name="rippleColor">?attr/colorAppAccentLight</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:stateListAnimator">@animator/btn_press</item>
+    </style>
+
+    <style name="Widget.ChronoX.Button.Danger" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/bg_button_3d_danger</item>
+        <item name="android:minHeight">@dimen/button_primary_height</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="rippleColor">?attr/colorAppAccentLight</item>
+        <item name="android:stateListAnimator">@animator/btn_press</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- =========================================================
+         FAB
+         ========================================================= -->
+    <style name="Widget.ChronoX.FAB" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">?attr/colorAppAccent</item>
+        <item name="tint">?attr/colorAppTextPrimary</item>
+        <item name="fabSize">normal</item>
+    </style>
+
+    <!-- =========================================================
+         BOTTOM NAVIGATION
+         Note: itemActiveIndicatorColor is an MDC attribute, applied directly
+         in the layout rather than in a theme style to avoid aapt2 issues.
+         ========================================================= -->
+    <style name="Widget.ChronoX.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">?attr/colorAppSurface</item>
+        <item name="itemTextColor">@color/bottom_nav_colors</item>
+        <item name="itemIconTint">@color/bottom_nav_colors</item>
+        <item name="itemRippleColor">?attr/colorAppAccentLight</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- =========================================================
+         TEXT APPEARANCES
+         Parent must be TextAppearance.MaterialComponents.* or android's built-ins.
+         ========================================================= -->
+    <style name="TextAppearance.ChronoX.ClockLarge" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">@dimen/text_clock_large</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance.ChronoX.ClockMedium" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textSize">@dimen/text_clock_medium</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ChronoX.ClockSmall" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">@dimen/text_clock_small</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ChronoX.ChessClock" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">@dimen/text_chess_clock</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance.ChronoX.ScreenTitle" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textSize">@dimen/text_screen_title</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ChronoX.SectionTitle" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">@dimen/text_section_title</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.ChronoX.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.ChronoX.Secondary" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textSize">@dimen/text_secondary</item>
+        <item name="android:textColor">?attr/colorAppTextSecondary</item>
+    </style>
+
+    <style name="TextAppearance.ChronoX.Label" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">?attr/colorAppTextSecondary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+
+    <!-- =========================================================
+         ALERT DIALOG
+         ========================================================= -->
+    <style name="ThemeOverlay.ChronoX.AlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">?attr/colorAppSurface</item>
+        <item name="colorOnSurface">?attr/colorAppTextPrimary</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.ChronoX.Dialog</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.ChronoX.Dialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <!-- =========================================================
+         TEXT INPUT LAYOUT
+         ========================================================= -->
+    <style name="Widget.ChronoX.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">?attr/colorAppDivider</item>
+        <item name="hintTextColor">?attr/colorAppTextSecondary</item>
+        <item name="android:textColorHint">?attr/colorAppTextSecondary</item>
+        <item name="boxBackgroundColor">?attr/colorAppSurfaceSecondary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/card_radius_sm</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/card_radius_sm</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/card_radius_sm</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/card_radius_sm</item>
+    </style>
+
+    <!-- =========================================================
+         TAB LAYOUT
+         ========================================================= -->
+    <style name="TextAppearance.ChronoX.Tab" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Widget.ChronoX.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">@style/TextAppearance.ChronoX.Tab</item>
+        <item name="android:background">@drawable/bg_floating_bar</item>
+        <item name="tabTextColor">?attr/colorAppTextSecondary</item>
+        <item name="tabSelectedTextColor">#FFFFFF</item>
+        <item name="tabIndicator">@drawable/bg_tab_indicator</item>
+        <item name="tabIndicatorColor">@null</item>
+        <item name="tabIndicatorGravity">stretch</item>
+        <item name="tabIndicatorAnimationMode">elastic</item>
+        <item name="tabRippleColor">@null</item>
+    </style>
+
+    <!-- =========================================================
+         SWITCH
+         ========================================================= -->
+    <style name="Widget.ChronoX.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="trackTint">@color/switch_track_color</item>
+        <item name="thumbTint">@color/switch_thumb_color</item>
+    </style>
+
+    <!-- =========================================================
+         CHIP (weekday selection)
+         ========================================================= -->
+    <style name="Widget.ChronoX.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">?attr/colorAppSurfaceSecondary</item>
+        <item name="chipStrokeColor">?attr/colorAppDivider</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipCornerRadius">20dp</item>
+    </style>
+
+</resources>
+
+
+
+

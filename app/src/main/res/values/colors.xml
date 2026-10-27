@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ChronoX Design System — Color Palette
+    All colors are defined here. Never hard-code colors in layouts or Java.
+
+    Design style: Modern, dark, digital, minimal — like a high-end smart clock app.
+-->
+<resources>
+    <!-- =========================================================
+         THEME 1: BLACK + RED (Original)
+         ========================================================= -->
+    <color name="theme1_bg">#FF000000</color>
+    <color name="theme1_surface">#FF1A1A1A</color>
+    <color name="theme1_surface_sec">#FF242424</color>
+    <color name="theme1_text_primary">#FFFFFFFF</color>
+    <color name="theme1_text_secondary">#FFA0A0A0</color>
+    <color name="theme1_text_disabled">#FF505050</color>
+    <color name="theme1_accent">#FFFF4B45</color>
+    <color name="theme1_accent_light">#33FF4B45</color>
+    <color name="theme1_accent_dark">#FFB33330</color>
+    <color name="theme1_divider">#FF303030</color>
+    <color name="theme1_matrix">#1AFFFFFF</color>
+    <color name="theme1_player1">#FFFF6B35</color>
+    <color name="theme1_player2">#FF35B5FF</color>
+    <color name="theme1_timer_plus">#FFFF6B35</color>
+    <color name="theme1_timer_minus">#FFB33330</color>
+    <color name="theme1_timeout_warning">#FFFFDD57</color>
+    <color name="theme1_timeout">#FFFF4B45</color>
+    <color name="theme1_switch_on">#66FF4B45</color>
+    <color name="theme1_switch_off">#FF404040</color>
+
+    <!-- =========================================================
+         THEME 2: DARK BLUE + LIGHT BLUE
+         ========================================================= -->
+    <color name="theme2_bg">#FF051024</color>
+    <color name="theme2_surface">#FF0A1B38</color>
+    <color name="theme2_surface_sec">#FF11264C</color>
+    <color name="theme2_text_primary">#FFFFFFFF</color>
+    <color name="theme2_text_secondary">#FF93B2DF</color>
+    <color name="theme2_text_disabled">#FF4A6B9C</color>
+    <color name="theme2_accent">#FF459DFF</color>
+    <color name="theme2_accent_light">#33459DFF</color>
+    <color name="theme2_accent_dark">#FF1E6FCC</color>
+    <color name="theme2_divider">#FF1A3668</color>
+    <color name="theme2_matrix">#1A459DFF</color>
+    <color name="theme2_player1">#FF459DFF</color>
+    <color name="theme2_player2">#FF00D4FF</color>
+    <color name="theme2_timer_plus">#FF459DFF</color>
+    <color name="theme2_timer_minus">#FF1E6FCC</color>
+    <color name="theme2_timeout_warning">#FFFFDD57</color>
+    <color name="theme2_timeout">#FFFF4B45</color>
+    <color name="theme2_switch_on">#66459DFF</color>
+    <color name="theme2_switch_off">#FF11264C</color>
+
+    <!-- =========================================================
+         THEME 3: WHITE + BLUE (Light Theme)
+         ========================================================= -->
+    <color name="theme3_bg">#FFFFFFFF</color>
+    <color name="theme3_surface">#FFF5F7FA</color>
+    <color name="theme3_surface_sec">#FFEAEFF5</color>
+    <color name="theme3_text_primary">#FF1C2533</color>
+    <color name="theme3_text_secondary">#FF64748B</color>
+    <color name="theme3_text_disabled">#FFCBD5E1</color>
+    <color name="theme3_accent">#FF2563EB</color>
+    <color name="theme3_accent_light">#332563EB</color>
+    <color name="theme3_accent_dark">#FF1D4ED8</color>
+    <color name="theme3_divider">#FFE2E8F0</color>
+    <color name="theme3_matrix">#1A2563EB</color>
+    <color name="theme3_player1">#FF2563EB</color>
+    <color name="theme3_player2">#FF0EA5E9</color>
+    <color name="theme3_timer_plus">#FF3B82F6</color>
+    <color name="theme3_timer_minus">#FF1E3A8A</color>
+    <color name="theme3_timeout_warning">#FFF59E0B</color>
+    <color name="theme3_timeout">#FFDC2626</color>
+    <color name="theme3_switch_on">#662563EB</color>
+    <color name="theme3_switch_off">#FFCBD5E1</color>
+
+    <!-- Legacy / Alias mapped to theme 1 as defaults for the preview tools -->
+    <color name="background">@color/theme1_bg</color>
+    <color name="surface">@color/theme1_surface</color>
+    <color name="surface_secondary">@color/theme1_surface_sec</color>
+    <color name="text_primary">@color/theme1_text_primary</color>
+    <color name="text_secondary">@color/theme1_text_secondary</color>
+    <color name="text_disabled">@color/theme1_text_disabled</color>
+    <color name="accent">@color/theme1_accent</color>
+    <color name="accent_light">@color/theme1_accent_light</color>
+    <color name="accent_dark">@color/theme1_accent_dark</color>
+    <color name="divider">@color/theme1_divider</color>
+    <color name="player1_color">@color/theme1_player1</color>
+    <color name="player2_color">@color/theme1_player2</color>
+    <color name="timeout_warning">@color/theme1_timeout_warning</color>
+    <color name="timeout_color">@color/theme1_timeout</color>
+
+    <color name="colorPrimary">@color/accent</color>
+    <color name="colorPrimaryVariant">@color/accent_dark</color>
+    <color name="colorOnPrimary">@color/text_primary</color>
+    <color name="colorSecondary">@color/accent</color>
+    <color name="colorOnSecondary">@color/text_primary</color>
+    <color name="colorBackground">@color/background</color>
+    <color name="colorSurface">@color/surface</color>
+    <color name="colorOnSurface">@color/text_primary</color>
+    <color name="colorError">#FFB00020</color>
+    <color name="colorOnError">@color/text_primary</color>
+    <color name="nav_bar_color">@color/background</color>
+    <color name="status_bar_color">@color/background</color>
+    <color name="switch_track_on">@color/theme1_switch_on</color>
+    <color name="switch_track_off">@color/theme1_switch_off</color>
+</resources>
+

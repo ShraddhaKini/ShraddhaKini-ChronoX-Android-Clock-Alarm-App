@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
+    android:paddingTop="36dp"
+    android:paddingBottom="36dp"
+    android:background="?attr/colorAppBackground">
+
+    <TextView
+        android:id="@+id/tv_ringing_alarm_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm is ringing"
+        android:textColor="?attr/colorAppAccent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_ringing_alarm_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tv_ringing_alarm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7:00"
+        android:textColor="?attr/colorAppTextPrimary"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        app:layout_constraintBottom_toTopOf="@id/tv_ringing_alarm_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ringing_alarm_caption"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tv_ringing_alarm_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Alarm"
+        android:textColor="?attr/colorAppTextSecondary"
+        android:textSize="22sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toTopOf="@id/btn_ringing_snooze"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ringing_alarm_time"
+        android:layout_marginBottom="44dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ringing_snooze"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Snooze 5 minutes"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:cornerRadius="18dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_ringing_stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="14dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ringing_stop"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Stop alarm"
+        android:textSize="17sp"
+        app:strokeColor="?attr/colorTimeout"
+        app:cornerRadius="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

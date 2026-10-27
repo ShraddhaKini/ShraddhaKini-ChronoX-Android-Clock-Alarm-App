@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Color state list for bottom navigation items: accent when selected, secondary when not -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="?attr/colorAppAccent" android:state_checked="true" />
+    <item android:color="?attr/colorAppTextSecondary" />
+</selector>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorAppBackground">
+
+    <!-- Matrix Background -->
+    <com.example.chronox.common.MatrixBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/screen_padding_horizontal"
+        android:paddingEnd="@dimen/screen_padding_horizontal">
+
+        <!-- Elapsed time display -->
+        <TextView
+            android:id="@+id/tv_stopwatch_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/text_clock_medium"
+            android:textColor="?attr/colorAppTextPrimary"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:text="00:00.00" />
+
+        <!-- Control buttons row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <!-- Lap / Reset (left) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_lap_reset"
+                style="@style/Widget.ChronoX.Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_primary_height"
+                android:text="@string/stopwatch_lap"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Start / Pause / Resume (center, primary) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_start_pause"
+                style="@style/Widget.ChronoX.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_primary_height"
+                android:text="@string/stopwatch_start" />
+
+        </LinearLayout>
+
+        <!-- Lap list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_laps"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

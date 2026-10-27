@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorAppBackground">
+
+    <com.example.chronox.common.MatrixBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Countdown display is resized in code for MM:SS and HH:MM:SS. -->
+        <TextView
+            android:id="@+id/tv_timer_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="112sp"
+            android:textColor="?attr/colorAppTextPrimary"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:text="00:00"
+            android:visibility="gone"
+            android:layout_marginBottom="40dp" />
+
+        <!-- Duration inputs: compact Hours, Minutes, Seconds row. -->
+        <LinearLayout
+            android:id="@+id/ll_duration_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="26dp">
+
+            <LinearLayout
+                android:id="@+id/ll_hms_input_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <!-- Hours -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_hours_up"
+                        style="@style/Widget.ChronoX.Button.Icon"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:textColor="?attr/colorTimerPlus"
+                        app:strokeColor="?attr/colorTimerPlus"
+                        android:text="+" />
+                    <EditText
+                        android:id="@+id/tv_hours"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="44sp"
+                        android:textColor="?attr/colorAppTextPrimary"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        android:text="00"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:selectAllOnFocus="true"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:importantForAutofill="no"
+                        android:imeOptions="actionDone" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timer_hours"
+                        android:textColor="?attr/colorTimerPlus"
+                        android:textSize="13sp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_hours_down"
+                        style="@style/Widget.ChronoX.Button.Icon"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:textColor="?attr/colorTimerMinus"
+                        app:strokeColor="?attr/colorTimerMinus"
+                        android:text="-" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" : "
+                    android:textColor="?attr/colorTimerPlus"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <!-- Minutes -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_minutes_up"
+                        style="@style/Widget.ChronoX.Button.Icon"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:textColor="?attr/colorTimerPlus"
+                        app:strokeColor="?attr/colorTimerPlus"
+                        android:text="+" />
+                    <EditText
+                        android:id="@+id/tv_minutes"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="44sp"
+                        android:textColor="?attr/colorAppTextPrimary"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        android:text="00"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:selectAllOnFocus="true"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:importantForAutofill="no"
+                        android:imeOptions="actionDone" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timer_minutes"
+                        android:textColor="?attr/colorTimerPlus"
+                        android:textSize="13sp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_minutes_down"
+                        style="@style/Widget.ChronoX.Button.Icon"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:textColor="?attr/colorTimerMinus"
+                        app:strokeColor="?attr/colorTimerMinus"
+                        android:text="-" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" : "
+                    android:textColor="?attr/colorTimerPlus"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <!-- Seconds -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_seconds_up"
+                        style="@style/Widget.ChronoX.Button.Icon"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:textColor="?attr/colorTimerPlus"
+                        app:strokeColor="?attr/colorTimerPlus"
+                        android:text="+" />
+                    <EditText
+                        android:id="@+id/tv_seconds"
+                        android:layout_width="64dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="44sp"
+                        android:textColor="?attr/colorAppTextPrimary"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        android:text="00"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:selectAllOnFocus="true"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:importantForAutofill="no"
+                        android:imeOptions="actionDone" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timer_seconds"
+                        android:textColor="?attr/colorTimerPlus"
+                        android:textSize="13sp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_seconds_down"
+                        style="@style/Widget.ChronoX.Button.Icon"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:textColor="?attr/colorTimerMinus"
+                        app:strokeColor="?attr/colorTimerMinus"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Preset chips row -->
+        <HorizontalScrollView
+            android:id="@+id/hsv_presets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:layout_marginBottom="26dp">
+            <LinearLayout
+                android:id="@+id/ll_presets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <!-- Control buttons row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_timer_reset"
+                style="@style/Widget.ChronoX.Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_reset"
+                android:textSize="16sp"
+                android:minHeight="56dp"
+                android:layout_marginEnd="16dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_timer_start_pause"
+                style="@style/Widget.ChronoX.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_start"
+                android:textSize="16sp"
+                android:minHeight="56dp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

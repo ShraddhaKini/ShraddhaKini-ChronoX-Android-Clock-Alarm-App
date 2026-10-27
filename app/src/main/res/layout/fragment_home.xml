@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorAppBackground">
+
+    <com.example.chronox.common.MatrixBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".home.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/screen_padding_horizontal"
+            android:paddingEnd="@dimen/screen_padding_horizontal"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <!-- TOP BAR: App name + 12/24h toggle -->
+            <TextView
+                android:id="@+id/tv_app_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="@dimen/text_screen_title"
+                android:textColor="?attr/colorAppTextPrimary"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_format_toggle" />
+
+            <ImageButton
+                android:id="@+id/btn_settings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_settings"
+                app:tint="?attr/colorAppTextSecondary"
+                android:contentDescription="Settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_app_title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_format_toggle"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12H"
+                android:textColor="?attr/colorAppTextSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginEnd="8dp"
+                app:strokeColor="?attr/colorAppDivider"
+                app:strokeWidth="1dp"
+                app:cornerRadius="16dp"
+                android:contentDescription="@string/content_desc_clock_format_toggle"
+                app:layout_constraintEnd_toStartOf="@+id/btn_settings"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_app_title" />
+
+            <!-- MAIN CLOCK DISPLAY -->
+            <LinearLayout
+                android:id="@+id/ll_main_clock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_app_title">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom" android:baselineAligned="true">
+
+                    <!-- Hour:Minute display -->
+                    <TextView
+                        android:id="@+id/tv_time_hm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="104sp"
+                        android:textColor="?attr/colorAppTextPrimary"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.02"
+                        android:includeFontPadding="false"
+                        tools:text="10:45" />
+
+                    <!-- Colon separator -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="50sp"
+                        android:textColor="?attr/colorAppTextSecondary"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        android:text=":" />
+
+                    <!-- Seconds -->
+                    <TextView
+                        android:id="@+id/tv_seconds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36sp"
+                        android:textColor="?attr/colorAppTextSecondary"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        tools:text="30" />
+                </LinearLayout>
+
+                <!-- AM/PM label -->
+                <TextView
+                    android:id="@+id/tv_ampm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:textColor="?attr/colorAppAccent"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    tools:text="AM" />
+            </LinearLayout>
+
+            <!-- DATE / DAY / TIMEZONE row -->
+            <LinearLayout
+                android:id="@+id/ll_date_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_main_clock">
+
+                <TextView
+                    android:id="@+id/tv_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="?attr/colorAppTextSecondary"
+                    tools:text="Monday," />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="?attr/colorAppTextSecondary"
+                    android:layout_marginStart="4dp"
+                    tools:text="Aug 19" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  "
+                    android:textColor="?attr/colorAppTextDisabled"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tv_timezone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="?attr/colorAppAccent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Open world clock"
+                    tools:text="Asia/Calcutta" />
+            </LinearLayout>
+
+            <!-- DIVIDER -->
+            <View
+                android:id="@+id/divider_top"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?attr/colorAppDivider"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_date_row" />
+
+            <!-- NEXT ALARM CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_next_alarm"
+                style="@style/Widget.ChronoX.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider_top">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_md"
+                        android:layout_height="@dimen/icon_size_md"
+                        android:src="@drawable/ic_alarm"
+                        android:contentDescription="@null"
+                        app:tint="?attr/colorAppAccent" />
+
+                    <TextView
+                        android:id="@+id/tv_next_alarm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="12dp"
+                        android:textSize="@dimen/text_secondary"
+                        android:textColor="?attr/colorAppTextSecondary"
+                        tools:text="Next alarm: 7:00 AM" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

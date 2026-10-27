@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorAppSurface"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Time Picker Area -->
+        <TextView
+            android:id="@+id/tv_alarm_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="48sp"
+            android:textColor="?attr/colorAppTextPrimary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="07:00 AM"
+            android:padding="16dp"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- One-time calendar date; hidden when repeat weekdays are selected. -->
+        <TextView
+            android:id="@+id/tv_alarm_date_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Date (for one-time alarms)"
+            android:textColor="?attr/colorAppTextSecondary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_alarm_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="Select date"
+            android:textColor="?attr/colorAppAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Label -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.ChronoX.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Alarm Label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_alarm_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:textColor="?attr/colorAppTextPrimary"
+                android:textColorHint="?attr/colorAppTextDisabled"
+                android:textColorHighlight="?attr/colorAppAccentLight"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Repeat Days -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat"
+            style="@style/TextAppearance.ChronoX.Label"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <ToggleButton
+                android:id="@+id/btn_day_sun"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_day_toggle"
+                android:textColor="@color/day_toggle_text"
+                android:textOn="S"
+                android:textOff="S"
+                android:checked="false" />
+            <ToggleButton
+                android:id="@+id/btn_day_mon"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_day_toggle"
+                android:textColor="@color/day_toggle_text"
+                android:textOn="M"
+                android:textOff="M"
+                android:checked="false" />
+            <ToggleButton
+                android:id="@+id/btn_day_tue"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_day_toggle"
+                android:textColor="@color/day_toggle_text"
+                android:textOn="T"
+                android:textOff="T"
+                android:checked="false" />
+            <ToggleButton
+                android:id="@+id/btn_day_wed"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_day_toggle"
+                android:textColor="@color/day_toggle_text"
+                android:textOn="W"
+                android:textOff="W"
+                android:checked="false" />
+            <ToggleButton
+                android:id="@+id/btn_day_thu"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_day_toggle"
+                android:textColor="@color/day_toggle_text"
+                android:textOn="T"
+                android:textOff="T"
+                android:checked="false" />
+            <ToggleButton
+                android:id="@+id/btn_day_fri"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_day_toggle"
+                android:textColor="@color/day_toggle_text"
+                android:textOn="F"
+                android:textOff="F"
+                android:checked="false" />
+            <ToggleButton
+                android:id="@+id/btn_day_sat"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_day_toggle"
+                android:textColor="@color/day_toggle_text"
+                android:textOn="S"
+                android:textOff="S"
+                android:checked="false" />
+        </LinearLayout>
+
+        <!-- Switches -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_ringtone"
+            style="@style/Widget.ChronoX.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sound"
+            android:textColor="?attr/colorAppTextPrimary"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:checked="true" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_vibration"
+            style="@style/Widget.ChronoX.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vibration"
+            android:textColor="?attr/colorAppTextPrimary"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:checked="true" />
+
+    </LinearLayout>
+</ScrollView>

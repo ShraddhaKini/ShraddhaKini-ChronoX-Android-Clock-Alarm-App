@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drop shadow / 3D edge (slightly darker) -->
+    <item android:top="4dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#40000000" />
+        </shape>
+    </item>
+    
+    <!-- Main button surface with subtle gradient -->
+    <item android:bottom="4dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="?attr/colorTimeout" />
+        </shape>
+    </item>
+</layer-list>

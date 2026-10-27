@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ChronoX Theme Definition
+    Base: MaterialComponents.DayNight.NoActionBar — always dark for this app.
+-->
+<resources>
+
+    <!-- =========================================================
+         BASE APP THEME
+         ========================================================= -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Default mapping to custom attributes for preview and legacy code -->
+        <item name="colorAppBackground">@color/theme1_bg</item>
+        <item name="colorAppSurface">@color/theme1_surface</item>
+        <item name="colorAppSurfaceSecondary">@color/theme1_surface_sec</item>
+        <item name="colorAppTextPrimary">@color/theme1_text_primary</item>
+        <item name="colorAppTextSecondary">@color/theme1_text_secondary</item>
+        <item name="colorAppTextDisabled">@color/theme1_text_disabled</item>
+        <item name="colorAppAccent">@color/theme1_accent</item>
+        <item name="colorAppAccentLight">@color/theme1_accent_light</item>
+        <item name="colorAppAccentDark">@color/theme1_accent_dark</item>
+        <item name="colorAppDivider">@color/theme1_divider</item>
+        <item name="colorMatrixLine">@color/theme1_matrix</item>
+        <item name="colorPlayer1">@color/theme1_player1</item>
+        <item name="colorPlayer2">@color/theme1_player2</item>
+        <item name="colorTimerPlus">@color/theme1_timer_plus</item>
+        <item name="colorTimerMinus">@color/theme1_timer_minus</item>
+        <item name="colorTimeoutWarning">@color/theme1_timeout_warning</item>
+        <item name="colorTimeout">@color/theme1_timeout</item>
+        <item name="colorBottomNavIcon">@color/theme1_text_secondary</item>
+        <item name="colorSwitchTrackOn">@color/theme1_switch_on</item>
+        <item name="colorSwitchTrackOff">@color/theme1_switch_off</item>
+
+        <!-- Material mappings using custom attributes -->
+        <item name="colorPrimary">?attr/colorAppAccent</item>
+        <item name="colorPrimaryVariant">?attr/colorAppAccentDark</item>
+        <item name="colorOnPrimary">?attr/colorAppTextPrimary</item>
+        <item name="colorSecondary">?attr/colorAppAccent</item>
+        <item name="colorSecondaryVariant">?attr/colorAppAccentDark</item>
+        <item name="colorOnSecondary">?attr/colorAppTextPrimary</item>
+        <item name="android:colorBackground">?attr/colorAppBackground</item>
+        <item name="colorSurface">?attr/colorAppSurface</item>
+        <item name="colorOnSurface">?attr/colorAppTextPrimary</item>
+        <item name="colorOnBackground">?attr/colorAppTextPrimary</item>
+        <item name="colorError">?attr/colorTimeout</item>
+        <item name="colorOnError">?attr/colorAppTextPrimary</item>
+        
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">?attr/colorAppBackground</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.ChronoX.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.ChronoX.LargeComponent</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.ChronoX.AlertDialog</item>
+        <item name="elevationOverlayEnabled">false</item>
+    </style>
+
+    <!-- THEME 1: BLACK + RED (Original) -->
+    <style name="Theme.ChronoX.BlackRed" parent="AppTheme">
+        <!-- Re-use the defaults defined in AppTheme -->
+    </style>
+
+    <!-- THEME 2: DARK BLUE + LIGHT BLUE -->
+    <style name="Theme.ChronoX.DarkBlue" parent="AppTheme">
+        <item name="colorAppBackground">@color/theme2_bg</item>
+        <item name="colorAppSurface">@color/theme2_surface</item>
+        <item name="colorAppSurfaceSecondary">@color/theme2_surface_sec</item>
+        <item name="colorAppTextPrimary">@color/theme2_text_primary</item>
+        <item name="colorAppTextSecondary">@color/theme2_text_secondary</item>
+        <item name="colorAppTextDisabled">@color/theme2_text_disabled</item>
+        <item name="colorAppAccent">@color/theme2_accent</item>
+        <item name="colorAppAccentLight">@color/theme2_accent_light</item>
+        <item name="colorAppAccentDark">@color/theme2_accent_dark</item>
+        <item name="colorAppDivider">@color/theme2_divider</item>
+        <item name="colorMatrixLine">@color/theme2_matrix</item>
+        <item name="colorPlayer1">@color/theme2_player1</item>
+        <item name="colorPlayer2">@color/theme2_player2</item>
+        <item name="colorTimerPlus">@color/theme2_timer_plus</item>
+        <item name="colorTimerMinus">@color/theme2_timer_minus</item>
+        <item name="colorTimeoutWarning">@color/theme2_timeout_warning</item>
+        <item name="colorTimeout">@color/theme2_timeout</item>
+        <item name="colorBottomNavIcon">@color/theme2_text_secondary</item>
+        <item name="colorSwitchTrackOn">@color/theme2_switch_on</item>
+        <item name="colorSwitchTrackOff">@color/theme2_switch_off</item>
+    </style>
+
+    <!-- THEME 3: WHITE + BLUE (Light Theme) -->
+    <style name="Theme.ChronoX.WhiteBlue" parent="AppTheme">
+        <item name="colorAppBackground">@color/theme3_bg</item>
+        <item name="colorAppSurface">@color/theme3_surface</item>
+        <item name="colorAppSurfaceSecondary">@color/theme3_surface_sec</item>
+        <item name="colorAppTextPrimary">@color/theme3_text_primary</item>
+        <item name="colorAppTextSecondary">@color/theme3_text_secondary</item>
+        <item name="colorAppTextDisabled">@color/theme3_text_disabled</item>
+        <item name="colorAppAccent">@color/theme3_accent</item>
+        <item name="colorAppAccentLight">@color/theme3_accent_light</item>
+        <item name="colorAppAccentDark">@color/theme3_accent_dark</item>
+        <item name="colorAppDivider">@color/theme3_divider</item>
+        <item name="colorMatrixLine">@color/theme3_matrix</item>
+        <item name="colorPlayer1">@color/theme3_player1</item>
+        <item name="colorPlayer2">@color/theme3_player2</item>
+        <item name="colorTimerPlus">@color/theme3_timer_plus</item>
+        <item name="colorTimerMinus">@color/theme3_timer_minus</item>
+        <item name="colorTimeoutWarning">@color/theme3_timeout_warning</item>
+        <item name="colorTimeout">@color/theme3_timeout</item>
+        <item name="colorBottomNavIcon">@color/theme3_text_secondary</item>
+        <item name="colorSwitchTrackOn">@color/theme3_switch_on</item>
+        <item name="colorSwitchTrackOff">@color/theme3_switch_off</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Launcher theme applied briefly at splash -->
+    <style name="AppTheme.Launcher" parent="Theme.ChronoX.BlackRed">
+    </style>
+
+
+</resources>

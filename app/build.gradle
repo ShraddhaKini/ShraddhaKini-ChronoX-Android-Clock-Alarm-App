@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.chronox'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.example.chronox"
+        minSdk 29
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Use Java 8 language features (lambdas, method references, etc.)
+    // java.time APIs are available from API 26+; minSdk=29 so no desugaring needed.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    // ViewBinding generates a binding class per layout — cleaner than findViewById()
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    // Core AndroidX
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.core:core:1.16.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.2'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    // Material Design 3 — BottomNavigationView, Cards, Dialogs, Chips, TextInputLayout
+    implementation 'com.google.android.material:material:1.14.0'
+
+    // Navigation Component — Fragment navigation & BottomNav wiring
+    implementation 'androidx.navigation:navigation-fragment:2.7.6'
+    implementation 'androidx.navigation:navigation-ui:2.7.6'
+
+    // ViewPager2 — Timer section tabs (Countdown/Stopwatch)
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // Room Database — alarms and world clock cities persistence
+    implementation 'androidx.room:room-runtime:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}

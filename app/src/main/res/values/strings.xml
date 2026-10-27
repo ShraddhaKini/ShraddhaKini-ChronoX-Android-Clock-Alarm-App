@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ChronoX String Resources
+    All user-visible strings must be defined here — never hard-coded in Java or XML.
+-->
+<resources>
+    <!-- App -->
+    <string name="app_name">ChronoX</string>
+
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+    <string name="nav_clock">Clock</string>
+    <string name="nav_alarm">Alarm</string>
+    <string name="nav_world_clock">World Clock</string>
+    <string name="nav_timer">Timer</string>
+    <string name="nav_chess">Chess</string>
+
+    <!-- Timer section tabs -->
+    <string name="tab_countdown">Countdown</string>
+    <string name="tab_stopwatch">Stopwatch</string>
+
+    <!-- =========================================================
+         HOME / DIGITAL CLOCK
+         ========================================================= -->
+    <string name="clock_no_alarm">No alarm set</string>
+    <string name="clock_next_alarm">Next alarm: %1$s</string>
+    <string name="clock_format_12h">12-hour format</string>
+    <string name="clock_format_24h">24-hour format</string>
+
+    <!-- =========================================================
+         ALARM
+         ========================================================= -->
+    <string name="alarm_title">Alarm</string>
+    <string name="alarm_add">Add Alarm</string>
+    <string name="alarm_edit">Edit Alarm</string>
+    <string name="alarm_delete">Delete Alarm</string>
+    <string name="alarm_label_hint">Label (optional)</string>
+    <string name="alarm_label_default">Alarm</string>
+    <string name="alarm_repeat">Repeat</string>
+    <string name="alarm_repeat_once">One time</string>
+    <string name="alarm_sound">Sound</string>
+    <string name="alarm_vibration">Vibration</string>
+    <string name="alarm_save">Save</string>
+    <string name="alarm_cancel">Cancel</string>
+    <string name="alarm_delete_confirm">Delete this alarm?</string>
+    <string name="alarm_delete_confirm_yes">Delete</string>
+    <string name="alarm_no_alarms">No alarms set.\nTap + to add one.</string>
+    <string name="alarm_scheduled">Alarm set for %1$s</string>
+    <string name="alarm_disabled">Alarm disabled</string>
+    <string name="alarm_set_time">Set alarm time</string>
+    <string name="alarm_set_toast">Alarm saved</string>
+    <string name="alarm_one_time">One time</string>
+
+
+    <!-- Weekdays -->
+    <string name="day_mon">Mon</string>
+    <string name="day_tue">Tue</string>
+    <string name="day_wed">Wed</string>
+    <string name="day_thu">Thu</string>
+    <string name="day_fri">Fri</string>
+    <string name="day_sat">Sat</string>
+    <string name="day_sun">Sun</string>
+
+    <!-- Repeat summary formats -->
+    <string name="alarm_everyday">Every day</string>
+    <string name="alarm_weekdays">Weekdays</string>
+    <string name="alarm_weekends">Weekends</string>
+
+    <!-- Alarm permission messages -->
+    <string name="alarm_permission_exact_title">Exact Alarm Permission Required</string>
+    <string name="alarm_permission_exact_message">To ring at the exact time you set, ChronoX needs the \"Schedule Exact Alarms\" permission. Without it, the alarm may be slightly delayed. Open Settings to grant this permission.</string>
+    <string name="alarm_permission_open_settings">Open Settings</string>
+    <string name="alarm_permission_dismiss">Dismiss</string>
+    <string name="alarm_fallback_scheduled">Alarm scheduled (inexact — grant exact alarm permission for better accuracy)</string>
+    <string name="alarm_exact_scheduled">Alarm scheduled</string>
+
+    <!-- Alarm notification -->
+    <string name="alarm_notification_title">%1$s</string>
+    <string name="alarm_notification_text">Tap to dismiss</string>
+    <string name="alarm_channel_name">Alarms</string>
+    <string name="alarm_channel_desc">Alarm notifications from ChronoX</string>
+    <string name="alarm_dismiss">Dismiss</string>
+    <string name="alarm_snooze">Snooze 5 min</string>
+
+    <!-- =========================================================
+         WORLD CLOCK
+         ========================================================= -->
+    <string name="world_clock_title">World Clock</string>
+    <string name="world_clock_add">Add City</string>
+    <string name="world_clock_search_hint">Search city or timezone…</string>
+    <string name="world_clock_no_cities">No cities added.\nTap + to add a city.</string>
+    <string name="world_clock_remove">Remove</string>
+    <string name="world_clock_time_ahead">+%1$s hr</string>
+    <string name="world_clock_time_behind">-%1$s hr</string>
+    <string name="world_clock_same_time">Same time</string>
+    <string name="world_clock_invalid_tz">Invalid timezone — city not added</string>
+    <string name="world_clock_already_added">%1$s is already in your list</string>
+    <string name="world_clock_city_added">%1$s added</string>
+    <string name="world_clock_city_removed">%1$s removed</string>
+
+    <!-- =========================================================
+         STOPWATCH
+         ========================================================= -->
+    <string name="stopwatch_title">Stopwatch</string>
+    <string name="stopwatch_start">Start</string>
+    <string name="stopwatch_pause">Pause</string>
+    <string name="stopwatch_resume">Resume</string>
+    <string name="stopwatch_reset">Reset</string>
+    <string name="stopwatch_lap">Lap</string>
+    <string name="stopwatch_lap_number">Lap %1$d</string>
+    <string name="stopwatch_no_laps">No laps recorded</string>
+
+    <!-- =========================================================
+         COUNTDOWN TIMER
+         ========================================================= -->
+    <string name="timer_title">Timer</string>
+    <string name="timer_start">Start</string>
+    <string name="timer_pause">Pause</string>
+    <string name="timer_resume">Resume</string>
+    <string name="timer_reset">Reset</string>
+    <string name="timer_cancel">Cancel</string>
+    <string name="timer_presets">Presets</string>
+    <string name="timer_set_duration">Set Duration</string>
+    <string name="timer_hours">H</string>
+    <string name="timer_minutes">M</string>
+    <string name="timer_seconds">S</string>
+    <string name="timer_zero_error">Please set a duration greater than zero</string>
+    <string name="timer_done">Time\'s up!</string>
+    <string name="timer_channel_name">Timer</string>
+    <string name="timer_channel_desc">Countdown timer notifications from ChronoX</string>
+    <string name="timer_notification_title">Timer finished</string>
+    <string name="timer_notification_text">Your countdown timer has ended</string>
+    <string name="timer_finished_message">Your countdown has ended. The alert sound will continue until you stop it.</string>
+    <string name="timer_stop_sound">Stop Sound</string>
+    <string name="stopwatch_notification_title">Stopwatch</string>
+    <string name="stopwatch_notification_running">Elapsed time is counting up</string>
+    <string name="stopwatch_notification_paused">Paused at %1$s</string>
+    <string name="stopwatch_reset_confirm_title">Reset stopwatch?</string>
+    <string name="stopwatch_reset_confirm_message">This will clear the elapsed time and all recorded laps.</string>
+
+    <!-- =========================================================
+         CHESS TIMER
+         ========================================================= -->
+    <string name="chess_title">Chess Timer</string>
+    <string name="chess_player1_default">Player 1</string>
+    <string name="chess_player2_default">Player 2</string>
+    <string name="chess_player1_name_hint">Player 1 name</string>
+    <string name="chess_player2_name_hint">Player 2 name</string>
+    <string name="chess_start">Start Game</string>
+    <string name="chess_pause">Pause</string>
+    <string name="chess_resume">Resume</string>
+    <string name="chess_reset">New Game</string>
+    <string name="chess_end_game">End Game</string>
+    <string name="chess_presets">Time Control</string>
+    <string name="chess_custom">Custom</string>
+    <string name="chess_minutes_hint">Minutes</string>
+    <string name="chess_increment_hint">Increment (sec)</string>
+    <string name="chess_moves">Moves: %1$d</string>
+    <string name="chess_your_turn">YOUR TURN</string>
+    <string name="chess_waiting">WAITING</string>
+    <string name="chess_timeout_title">Time\'s Up!</string>
+    <string name="chess_timeout_message">%1$s ran out of time.\nTotal Moves: %2$d</string>
+    <string name="chess_new_game">New Game</string>
+    <string name="chess_invalid_time">Starting time must be greater than zero</string>
+    <string name="chess_invalid_increment">Increment cannot be negative</string>
+    <string name="chess_tap_to_switch">Tap your panel when done with your move</string>
+    <string name="chess_game_paused">PAUSED</string>
+    <string name="chess_setup_title">Setup Game</string>
+    <string name="chess_confirm_reset">Reset the current game?</string>
+
+    <!-- =========================================================
+         NOTIFICATIONS
+         ========================================================= -->
+    <string name="notification_permission_title">Enable Notifications</string>
+    <string name="notification_permission_message">ChronoX uses notifications to alert you when alarms ring and timers finish. Please grant notification permission.</string>
+    <string name="notification_permission_grant">Grant</string>
+    <string name="notification_permission_later">Later</string>
+
+    <!-- =========================================================
+         COMMON / DIALOGS
+         ========================================================= -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="confirm">Confirm</string>
+    <string name="close">Close</string>
+    <string name="settings">Settings</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="content_desc_fab_add">Add</string>
+    <string name="content_desc_delete_alarm">Delete alarm</string>
+    <string name="content_desc_remove_city">Remove city</string>
+    <string name="content_desc_clock_format_toggle">Toggle 12/24 hour format</string>
+    <string name="content_desc_alarm_toggle">Toggle alarm on or off</string>
+</resources>

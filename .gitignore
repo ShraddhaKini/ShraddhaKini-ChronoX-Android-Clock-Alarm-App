@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# Local configuration (machine-specific)
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.DS_Store
+
+# Signing / keystores (never commit these)
+*.jks
+*.keystore
+
+# Generated APKs / bundles
+*.apk
+*.aab
+*.ap_
+*.dex

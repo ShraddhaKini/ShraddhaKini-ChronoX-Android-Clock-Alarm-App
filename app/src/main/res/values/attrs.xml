@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <attr name="colorAppBackground" format="color" />
+    <attr name="colorAppSurface" format="color" />
+    <attr name="colorAppSurfaceSecondary" format="color" />
+    
+    <!-- Text -->
+    <attr name="colorAppTextPrimary" format="color" />
+    <attr name="colorAppTextSecondary" format="color" />
+    <attr name="colorAppTextDisabled" format="color" />
+    
+    <!-- Accents -->
+    <attr name="colorAppAccent" format="color" />
+    <attr name="colorAppAccentLight" format="color" />
+    <attr name="colorAppAccentDark" format="color" />
+    
+    <!-- Lines / Dividers -->
+    <attr name="colorAppDivider" format="color" />
+    <attr name="colorMatrixLine" format="color" />
+    
+    <!-- Specific components -->
+    <attr name="colorPlayer1" format="color" />
+    <attr name="colorPlayer2" format="color" />
+    
+    <!-- Timer + and - buttons -->
+    <attr name="colorTimerPlus" format="color" />
+    <attr name="colorTimerMinus" format="color" />
+    
+    <!-- Timeout -->
+    <attr name="colorTimeoutWarning" format="color" />
+    <attr name="colorTimeout" format="color" />
+    
+    <!-- Bottom Nav -->
+    <attr name="colorBottomNavIcon" format="color" />
+    
+    <!-- Switches -->
+    <attr name="colorSwitchTrackOn" format="color" />
+    <attr name="colorSwitchTrackOff" format="color" />
+</resources>

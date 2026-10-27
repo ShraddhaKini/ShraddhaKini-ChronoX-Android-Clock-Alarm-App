@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorAppBackground">
+
+    <com.example.chronox.common.MatrixBackgroundView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_world_clock_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/world_clock_title"
+        android:textSize="@dimen/text_screen_title"
+        android:textColor="?attr/colorAppTextPrimary"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/screen_padding_horizontal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_world_clock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="@dimen/screen_padding_horizontal"
+        android:paddingEnd="@dimen/screen_padding_horizontal"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:id="@+id/tv_empty_world_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/world_clock_no_cities"
+        android:textColor="?attr/colorAppTextSecondary"
+        android:textSize="@dimen/text_normal"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_city"
+        style="@style/Widget.ChronoX.FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add"
+        android:contentDescription="@string/world_clock_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

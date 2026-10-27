@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ChronoX Navigation Graph
+    Defines all fragment destinations and their relationships.
+    MainActivity hosts the NavHostFragment that uses this graph.
+    BottomNavigationView items correspond to the top-level destinations.
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_clock">
+
+    <!-- =========================================================
+         HOME / DIGITAL CLOCK
+         ========================================================= -->
+    <fragment
+        android:id="@+id/nav_clock"
+        android:name="com.example.chronox.home.HomeFragment"
+        android:label="@string/nav_clock"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- =========================================================
+         ALARM
+         ========================================================= -->
+    <fragment
+        android:id="@+id/nav_alarm"
+        android:name="com.example.chronox.alarm.AlarmFragment"
+        android:label="@string/nav_alarm"
+        tools:layout="@layout/fragment_alarm" />
+
+    <!-- =========================================================
+         WORLD CLOCK
+         ========================================================= -->
+    <fragment
+        android:id="@+id/nav_world_clock"
+        android:name="com.example.chronox.worldclock.WorldClockFragment"
+        android:label="@string/nav_world_clock"
+        tools:layout="@layout/fragment_world_clock" />
+
+    <!-- =========================================================
+         TIMER CONTAINER (hosts Countdown / Stopwatch / Chess tabs)
+         ========================================================= -->
+    <fragment
+        android:id="@+id/nav_timer"
+        android:name="com.example.chronox.timer.TimerContainerFragment"
+        android:label="@string/nav_timer"
+        tools:layout="@layout/fragment_timer_container" />
+
+    <!-- =========================================================
+         CHESS TIMER
+         ========================================================= -->
+    <fragment
+        android:id="@+id/nav_chess"
+        android:name="com.example.chronox.chess.ChessTimerFragment"
+        android:label="@string/nav_chess"
+        tools:layout="@layout/fragment_chess_timer" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.chronox.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>
